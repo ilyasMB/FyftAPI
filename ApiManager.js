@@ -1,18 +1,19 @@
 var mysql = require('mysql'); // use mysql module
 var http = require('http'); // http request
 var https = require('https'); // https request
-var con = mysql.createConnection({ // connecte to database
-  host: "localhost",    // host: "XX.X.XX.XXX",
-  user: "root",        // username
-  password: "",       
-  database: "fyft"  // data base name 
+// var con = mysql.createConnection({ // variable for connectection to database
+//   host: "localhost",    // host: "XX.X.XX.XXX",
+//   user: "root",        // username
+//   password: "",       
+//   database: "fyft"  // data base name 
 
-});
+// });
+// init connection to db
+// con.connect(function (err) {
+//   if (err) throw err;
+//   console.log("Database connected !");
+// });
 
-con.connect(function (err) {
-  if (err) throw err;
-  console.log("Database connected !");
-});
 var linkdinFindByName = function (user, callback) {
   var url = 'https://api.linkedin.com/v1/user/' + user;
   https.get(url, (resp) => {

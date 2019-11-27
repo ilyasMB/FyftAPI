@@ -1,7 +1,7 @@
 const express = require('express');// gerer les routes 
 const bodyParser = require("body-parser"); //middleware reccup contenu de la raquette
 const app = express(); // extrait le chemin de l'URL
-const ApiManager = require('./ApiManager.js/index.js');
+const ApiManager = require('./ApiManager.js');
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -13,7 +13,7 @@ app.use(function (req, res, next) {
     if ('OPTIIONS' == req.method) {
         res.sendStatus(200);
     } else {
-        console.log('bsa7tek ${req.ip} ${req.method} ${req.url}')
+        console.log('${req.ip} ${req.method} ${req.url}')
         next();
     }
 });
