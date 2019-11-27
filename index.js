@@ -1,7 +1,7 @@
 const express = require('express');// gerer les routes 
 const bodyParser = require("body-parser"); //middleware reccup contenu de la raquette
 const app = express(); // extrait le chemin de l'URL
-const mysqlManager = require('./mysqlManager.js');
+const ApiManager = require('./ApiManager.js/index.js');
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,7 +18,7 @@ app.use(function (req, res, next) {
     }
 });
 
-let exampleLinkdin = {
+let linkdinExample = {
     "Nom": 'frfr',
     "Prenom": 'dfrg',
     "Age": 'gtgt',
@@ -49,10 +49,10 @@ let exampleLinkdin = {
 }
 let codeWarsExample =
 {
-    "username": "some_user",
-    "name": "Some Person",
+    "username": "soumgrahyque",
+    "name": "Sam Boujdayn",
     "honor": 544,
-    "clan": "some clan",
+    "clan": "bla",
     "leaderboardPosition": 134,
     "skills": [
         "ruby",
@@ -865,7 +865,12 @@ app.get('/', (req, res) => {
     res.send([{ api: 'Cables' }]);
 });
 app.get('/linkdin', (req, res) => {
-    res.send([exampleLinkdin]);
+    res.send([linkdinExample]);
+// Get response from linkdin API (same for other API's)
+    // ApiManager.linkdinFindByName(function (result) {
+    //     res.header("Content-Type", "text/json");
+    //     res.send(result);
+    // });
 });
 app.get('/stackoverflow', (req, res) => {
     res.send([stackExample]);
@@ -877,10 +882,47 @@ app.get('/example', (req, res) => {
     res.send([Response]);
 });
 
-function formatJson() {
+function formatJson(codeWarsExample,stackExample, linkdinExample) {
     var jsonCodeWar = {
-        "nom": codeWarsExample.name.split(' ')[0]
-    };
+        "Nom": codeWarsExample.name.split(' ')[0],
+        "Prénom": codeWarsExample.name.split(' ')[1],
+        "Ville": linkdinExample.Ville,
+        "Tel": "06.90.43.55.67",
+        "Mail": "nicolas.berard@gmail.com",
+        "Photo": "https://media.licdn.com/dms/image/C5603AQEdoQx1noISEw/profile-displayphoto-shrink_800_800/0?e=1580342400&v=beta&t=FUZlVFESNqDS5z1zv2F6hkpm4fpnmbQOFvn_m21q634",
+        "Reputation": 444,
+        "StackOverFlow": {
+            "Reputation": stackExample.reputation,
+            "Score": stackExample.score
+        },
+        "CodeWors": {
+            "color": "blue",
+            "Langage": {
+                "HTML": {
+                    "Score": "780"
+                },
+                "CSS": {
+                    "Score": "1500"
+                },
+                "Sass": {
+                    "Score": "800"
+                },
+                "JavaScript": {
+                    "Score": "907"
+                },
+                "C#": {
+                    "Score": "1020"
+                },
+                "ASP.net": {
+                    "Score": "500"
+                },
+                "Java": {
+                    "Score": "840"
+                }
+            }
+        },
+        "Source": ["Linkdin", "stackOverFlow", "CodeWars"]
+    }
     console.log(jsonCodeWar);
 }
 formatJson();
