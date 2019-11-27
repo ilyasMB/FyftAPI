@@ -18,6 +18,7 @@ app.use(function (req, res, next) {
     }
 });
 
+// Example for Linkdin API response
 let linkdinExample = {
     "Nom": 'frfr',
     "Prenom": 'dfrg',
@@ -47,6 +48,8 @@ let linkdinExample = {
         ]
     }
 }
+
+// Example for codeWars API response
 let codeWarsExample =
 {
     "username": "soumgrahyque",
@@ -98,6 +101,8 @@ let codeWarsExample =
 
 
 }
+
+// Example for stackOverFlow API response
 let stackExample =
 {
     "items": [
@@ -582,6 +587,8 @@ let stackExample =
     "quota_max": 300,
     "quota_remaining": 218
 }
+
+// the final response (mixte with all the API's requests)
 let Response =
 {
     "persones": [
@@ -861,11 +868,16 @@ let Response =
         }
     ],
 }
+
 app.get('/', (req, res) => {
-    res.send([{ api: 'Cables' }]);
+    res.send([{ api: 'Welcome to Fyft API ' }]);
 });
+
+// the /linkdin will return the response that we write 
+// because we are not allowed to use linkdin API (same for other API's) 
 app.get('/linkdin', (req, res) => {
     res.send([linkdinExample]);
+
 // Get response from linkdin API (same for other API's)
     // ApiManager.linkdinFindByName(function (result) {
     //     res.header("Content-Type", "text/json");
@@ -874,9 +886,17 @@ app.get('/linkdin', (req, res) => {
 });
 app.get('/stackoverflow', (req, res) => {
     res.send([stackExample]);
+    // ApiManager.stackoverflowFinfBySubject(function (result) {
+    //     res.header("Content-Type", "text/json");
+    //     res.send(result);
+    // });
 });
 app.get('/codewars', (req, res) => {
     res.send([codeWarsExample]);
+    // ApiManager.codewarsFindByName(function (result) {
+    //     res.header("Content-Type", "text/json");
+    //     res.send(result);
+    // });
 });
 app.get('/example', (req, res) => {
     res.send([Response]);
@@ -925,8 +945,6 @@ function formatJson(codeWarsExample,stackExample, linkdinExample) {
     }
     console.log(jsonCodeWar);
 }
-formatJson();
-
 
 app.listen(8081, () => {
     console.log("started");
