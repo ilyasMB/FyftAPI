@@ -595,6 +595,7 @@ let Response =
         {
             "Nom": "Bernard",
             "prenom": "Nicolas",
+            "fullname": "",
             "Age": 30,
             "Description": "Full stack",
             "Ville": "Landerneau",
@@ -721,7 +722,7 @@ let Response =
             "Ville": "Puteaux",
             "Tel": "0656298756",
             "Mail": "elbouhassaniomar@gmail.com",
-            "Photo": "",
+            "photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
             "StackOverFlow": "",
             "CodeWors": {
                 "color": "blue",
@@ -793,7 +794,7 @@ let Response =
             "Ville": "Paris",
             "Tel": "06.35.14.67.42",
             "Mail": "patrick.colin@gmail.com",
-            "Photo": "",
+            "photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
             "StackOverFlow": {
                 "Reputation": 2235,
                 "Score": 1680
@@ -816,7 +817,7 @@ let Response =
             "Ville": "Créteil",
             "Tel": "06.57.52.40.81",
             "Mail": "",
-            "Photo": "",
+            "photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
             "StackOverFlow": {
                 "Reputation": 2235,
                 "Score": 1680
@@ -839,7 +840,7 @@ let Response =
             "Ville": "Marseille",
             "Tel": "",
             "Mail": "juliette.marchal@gmail.com",
-            "Photo": "",
+            "photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
             "StackOverFlow": {
                 "Reputation": 2235,
                 "Score": 1680
@@ -868,7 +869,7 @@ let Response =
             "Ville": "Brest",
             "Tel": "",
             "Mail": "",
-            "Photo": "",
+            "photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
             "StackOverFlow": "",
             "CodeWors": {
                 "Langage": {
@@ -887,7 +888,7 @@ let Response =
             "Ville": "",
             "Tel": "",
             "Mail": "",
-            "Photo": "",
+            "photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
             "StackOverFlow": {
                 "Reputation": 2235,
                 "Score": 1680
