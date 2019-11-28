@@ -594,9 +594,9 @@ let Response =
     "persones": [
         {
             "Nom": "Bernard",
-            "Prénom": "Nicolas",
+            "prenom": "Nicolas",
             "Age": 30,
-            "Description": "Full stack" ,
+            "Description": "Full stack",
             "Ville": "Landerneau",
             "Tel": "06.90.43.55.67",
             "Mail": "nicolas.berard@gmail.com",
@@ -632,13 +632,17 @@ let Response =
                     }
                 }
             },
-            "Source": ["linkedin", "stackOverFlow", "CodeWars"]
+            "Source": {
+                "linkedin": true,
+                "stackOverFlow": true,
+                "CodeWars": true
+            }
         },
         {
             "Nom": "Ahamadi",
-            "Prénom": "Nourdine",
+            "prenom": "Nourdine",
             "Age": 23,
-            "Description": "Angular" ,
+            "Description": "Angular",
             "Ville": "Brest",
             "Tel": "06.90.45.35.66",
             "Mail": "nourdine.ahamadi01@gmail.com",
@@ -667,13 +671,17 @@ let Response =
                     }
                 }
             },
-            "Source": ["linkedin", "StackOverFlow", "CodeWars"]
+            "Source": {
+                "linkedin": true,
+                "stackOverFlow": true,
+                "CodeWars": true
+            }
         },
         {
             "Nom": "Akbilgin",
-            "Prénom": "Mehmet ",
+            "prenom": "Mehmet ",
             "Age": 27,
-            "Description": "Java" ,
+            "Description": "Java",
             "Ville": "Paris",
             "Tel": "0765782543",
             "Mail": "mehmet.Akbilgin@hotmail.fr",
@@ -699,13 +707,17 @@ let Response =
                     }
                 }
             },
-            "Source": ["linkedin", "StackOverFlow", "CodeWars"]
+            "Source": {
+                "linkedin": true,
+                "stackOverFlow": true,
+                "CodeWars": true
+            }
         },
         {
             "Nom": "El Bouhassani",
-            "Prénom": "Omar",
+            "prenom": "Omar",
             "Age": 29,
-            "Description": "JavaScript" ,
+            "Description": "JavaScript",
             "Ville": "Puteaux",
             "Tel": "0656298756",
             "Mail": "elbouhassaniomar@gmail.com",
@@ -728,13 +740,17 @@ let Response =
                     }
                 }
             },
-            "Source": ["codeWars"]
+            "Source": {
+                "linkedin": false,
+                "stackOverFlow": false,
+                "CodeWars": true
+            }
         },
         {
             "Nom": "Le Roch",
-            "Prénom": "Johan",
+            "prenom": "Johan",
             "Age": 35,
-            "Description": "React" ,
+            "Description": "React",
             "Ville": "Brest",
             "Tel": "0645871089",
             "Mail": "Johan.leroch@gmail.com",
@@ -763,13 +779,17 @@ let Response =
                     }
                 }
             },
-            "Source": ["linkedin", "StackOverFlow", "CodeWars"]
+            "Source": {
+                "linkedin": true,
+                "stackOverFlow": true,
+                "CodeWars": true
+            }
         },
         {
             "Nom": "Colin",
-            "Prénom": "Patrick",
+            "prenom": "Patrick",
             "Age": 35,
-            "Description": "Php" ,
+            "Description": "Php",
             "Ville": "Paris",
             "Tel": "06.35.14.67.42",
             "Mail": "patrick.colin@gmail.com",
@@ -782,13 +802,17 @@ let Response =
                 "color": "",
                 "Langage": ""
             },
-            "Source": ["linkedin"]
+            "Source": {
+                "linkedin": true,
+                "stackOverFlow": true,
+                "CodeWars": false
+            }
         },
         {
             "Nom": "Le Gall",
-            "Prénom": "Catherine",
+            "prenom": "Catherine",
             "Age": 26,
-            "Description": "Python" ,
+            "Description": "Python",
             "Ville": "Créteil",
             "Tel": "06.57.52.40.81",
             "Mail": "",
@@ -801,13 +825,17 @@ let Response =
 
                 "Langage": ""
             },
-            "Source": ["linkedin", "StackOverFlow"]
+            "Source": {
+                "linkedin": true,
+                "stackOverFlow": true,
+                "CodeWars": false
+            }
         },
         {
             "Nom": "Marchal",
-            "Prénom": "Juliette",
+            "prenom": "Juliette",
             "Age": 30,
-            "Description": "C++" ,
+            "Description": "C++",
             "Ville": "Marseille",
             "Tel": "",
             "Mail": "juliette.marchal@gmail.com",
@@ -826,13 +854,17 @@ let Response =
                     }
                 }
             },
-            "Source": ["linkedin", "StackOverFlow", "CodeWars"]
+            "Source": {
+                "linkedin": true,
+                "stackOverFlow": true,
+                "CodeWars": true
+            }
         },
         {
             "Nom": "Bouvier",
-            "Prénom": "Bruno",
+            "prenom": "Bruno",
             "Age": 50,
-            "Description": "ASP Classic" ,
+            "Description": "ASP Classic",
             "Ville": "Brest",
             "Tel": "",
             "Mail": "",
@@ -849,9 +881,9 @@ let Response =
         },
         {
             "Nom": "Bernard",
-            "Prénom": "Flora",
+            "prenom": "Flora",
             "Age": 28,
-            "Description": "HTML/CSS" ,
+            "Description": "HTML/CSS",
             "Ville": "",
             "Tel": "",
             "Mail": "",
@@ -874,7 +906,11 @@ let Response =
                     }
                 }
             },
-            "Source": ["StackOverFlow"]
+            "Source": {
+                "linkedin": false,
+                "stackOverFlow": true,
+                "CodeWars": true
+            }
         }
     ],
 }
@@ -889,7 +925,7 @@ app.get('/', (req, res) => {
 app.get('/linkedin', (req, res) => {
     res.send([linkedinExample]);
 
-// Get response from linkedin API (same for other API's)
+    // Get response from linkedin API (same for other API's)
     // ApiManager.linkedinFindByName(function (result) {
     //     res.header("Content-Type", "text/json");
     //     res.send(result);
@@ -910,13 +946,13 @@ app.get('/codewars', (req, res) => {
     // });
 });
 app.get('/example', (req, res) => {
-    res.send([Response]);
+    res.send(Response);
 });
 
-function formatJson(codeWarsExample,stackExample, linkedinExample) {
+function formatJson(codeWarsExample, stackExample, linkedinExample) {
     var jsonCodeWar = {
         "Nom": codeWarsExample.name.split(' ')[0],
-        "Prénom": codeWarsExample.name.split(' ')[1],
+        "prenom": codeWarsExample.name.split(' ')[1],
         "Ville": linkedinExample.Ville,
         "Tel": "06.90.43.55.67",
         "Mail": "nicolas.berard@gmail.com",
