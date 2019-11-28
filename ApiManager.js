@@ -14,7 +14,7 @@ var https = require('https'); // https request
 //   console.log("Database connected !");
 // });
 
-var linkdinFindByName = function (user, callback) {
+var linkedinFindByName = function (user, callback) {
   var url = 'https://api.linkedin.com/v1/user/' + user;
   https.get(url, (resp) => {
     let data = '';
@@ -100,7 +100,7 @@ var stackoverflowGetReputationByName = function (user, callback) {
   })
 };
 module.exports = {
-  linkdinFindByName,
+  linkedinFindByName,
   codewarsFindByName,
   codewarsFindBySkills,
   stackoverflowFinfBySubject,

@@ -18,8 +18,8 @@ app.use(function (req, res, next) {
     }
 });
 
-// Example for Linkdin API response
-let linkdinExample = {
+// Example for linkedin API response
+let linkedinExample = {
     "Nom": 'frfr',
     "Prenom": 'dfrg',
     "Age": 'gtgt',
@@ -596,6 +596,7 @@ let Response =
             "Nom": "Bernard",
             "Prénom": "Nicolas",
             "Age": 30,
+            "Description": "Full stack" ,
             "Ville": "Landerneau",
             "Tel": "06.90.43.55.67",
             "Mail": "nicolas.berard@gmail.com",
@@ -631,12 +632,13 @@ let Response =
                     }
                 }
             },
-            "Source": ["Linkdin", "stackOverFlow", "CodeWars"]
+            "Source": ["linkedin", "stackOverFlow", "CodeWars"]
         },
         {
             "Nom": "Ahamadi",
             "Prénom": "Nourdine",
             "Age": 23,
+            "Description": "Angular" ,
             "Ville": "Brest",
             "Tel": "06.90.45.35.66",
             "Mail": "nourdine.ahamadi01@gmail.com",
@@ -665,12 +667,13 @@ let Response =
                     }
                 }
             },
-            "Source": ["Linkdin", "StackOverFlow", "CodeWars"]
+            "Source": ["linkedin", "StackOverFlow", "CodeWars"]
         },
         {
             "Nom": "Akbilgin",
             "Prénom": "Mehmet ",
             "Age": 27,
+            "Description": "Java" ,
             "Ville": "Paris",
             "Tel": "0765782543",
             "Mail": "mehmet.Akbilgin@hotmail.fr",
@@ -696,12 +699,13 @@ let Response =
                     }
                 }
             },
-            "Source": ["Linkdin", "StackOverFlow", "CodeWars"]
+            "Source": ["linkedin", "StackOverFlow", "CodeWars"]
         },
         {
             "Nom": "El Bouhassani",
             "Prénom": "Omar",
             "Age": 29,
+            "Description": "JavaScript" ,
             "Ville": "Puteaux",
             "Tel": "0656298756",
             "Mail": "elbouhassaniomar@gmail.com",
@@ -730,6 +734,7 @@ let Response =
             "Nom": "Le Roch",
             "Prénom": "Johan",
             "Age": 35,
+            "Description": "React" ,
             "Ville": "Brest",
             "Tel": "0645871089",
             "Mail": "Johan.leroch@gmail.com",
@@ -758,12 +763,13 @@ let Response =
                     }
                 }
             },
-            "Source": ["Linkdin", "StackOverFlow", "CodeWars"]
+            "Source": ["linkedin", "StackOverFlow", "CodeWars"]
         },
         {
             "Nom": "Colin",
             "Prénom": "Patrick",
             "Age": 35,
+            "Description": "Php" ,
             "Ville": "Paris",
             "Tel": "06.35.14.67.42",
             "Mail": "patrick.colin@gmail.com",
@@ -776,12 +782,13 @@ let Response =
                 "color": "",
                 "Langage": ""
             },
-            "Source": ["Linkdin"]
+            "Source": ["linkedin"]
         },
         {
             "Nom": "Le Gall",
             "Prénom": "Catherine",
             "Age": 26,
+            "Description": "Python" ,
             "Ville": "Créteil",
             "Tel": "06.57.52.40.81",
             "Mail": "",
@@ -794,12 +801,13 @@ let Response =
 
                 "Langage": ""
             },
-            "Source": ["Linkdin", "StackOverFlow"]
+            "Source": ["linkedin", "StackOverFlow"]
         },
         {
             "Nom": "Marchal",
             "Prénom": "Juliette",
             "Age": 30,
+            "Description": "C++" ,
             "Ville": "Marseille",
             "Tel": "",
             "Mail": "juliette.marchal@gmail.com",
@@ -818,12 +826,13 @@ let Response =
                     }
                 }
             },
-            "Source": ["Linkdin", "StackOverFlow", "CodeWars"]
+            "Source": ["linkedin", "StackOverFlow", "CodeWars"]
         },
         {
             "Nom": "Bouvier",
             "Prénom": "Bruno",
             "Age": 50,
+            "Description": "ASP Classic" ,
             "Ville": "Brest",
             "Tel": "",
             "Mail": "",
@@ -836,12 +845,13 @@ let Response =
                     }
                 }
             },
-            "Source": ["Linkdin", "StackOverFlow"]
+            "Source": ["linkedin", "StackOverFlow"]
         },
         {
             "Nom": "Bernard",
             "Prénom": "Flora",
             "Age": 28,
+            "Description": "HTML/CSS" ,
             "Ville": "",
             "Tel": "",
             "Mail": "",
@@ -869,17 +879,18 @@ let Response =
     ],
 }
 
+
 app.get('/', (req, res) => {
     res.send([{ api: 'Welcome to Fyft API ' }]);
 });
 
-// the /linkdin will return the response that we write 
-// because we are not allowed to use linkdin API (same for other API's) 
-app.get('/linkdin', (req, res) => {
-    res.send([linkdinExample]);
+// the /linkedin will return the response that we write 
+// because we are not allowed to use linkedin API (same for other API's) 
+app.get('/linkedin', (req, res) => {
+    res.send([linkedinExample]);
 
-// Get response from linkdin API (same for other API's)
-    // ApiManager.linkdinFindByName(function (result) {
+// Get response from linkedin API (same for other API's)
+    // ApiManager.linkedinFindByName(function (result) {
     //     res.header("Content-Type", "text/json");
     //     res.send(result);
     // });
@@ -902,11 +913,11 @@ app.get('/example', (req, res) => {
     res.send([Response]);
 });
 
-function formatJson(codeWarsExample,stackExample, linkdinExample) {
+function formatJson(codeWarsExample,stackExample, linkedinExample) {
     var jsonCodeWar = {
         "Nom": codeWarsExample.name.split(' ')[0],
         "Prénom": codeWarsExample.name.split(' ')[1],
-        "Ville": linkdinExample.Ville,
+        "Ville": linkedinExample.Ville,
         "Tel": "06.90.43.55.67",
         "Mail": "nicolas.berard@gmail.com",
         "Photo": "https://media.licdn.com/dms/image/C5603AQEdoQx1noISEw/profile-displayphoto-shrink_800_800/0?e=1580342400&v=beta&t=FUZlVFESNqDS5z1zv2F6hkpm4fpnmbQOFvn_m21q634",
@@ -941,7 +952,7 @@ function formatJson(codeWarsExample,stackExample, linkdinExample) {
                 }
             }
         },
-        "Source": ["Linkdin", "stackOverFlow", "CodeWars"]
+        "Source": ["linkedin", "stackOverFlow", "CodeWars"]
     }
     console.log(jsonCodeWar);
 }
