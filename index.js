@@ -635,8 +635,8 @@ let Response =
             },
             "Source": {
                 "linkedin": true,
-                "stackOverFlow": true,
-                "CodeWars": true
+                "stackOverFlow": false,
+                "CodeWars": false
             }
         },
         {
@@ -675,7 +675,7 @@ let Response =
             "Source": {
                 "linkedin": true,
                 "stackOverFlow": true,
-                "CodeWars": true
+                "CodeWars": false
             }
         },
         {
@@ -710,8 +710,8 @@ let Response =
             },
             "Source": {
                 "linkedin": true,
-                "stackOverFlow": true,
-                "CodeWars": true
+                "stackOverFlow": false,
+                "CodeWars": false
             }
         },
         {
@@ -722,7 +722,7 @@ let Response =
             "Ville": "Puteaux",
             "Tel": "0656298756",
             "Mail": "elbouhassaniomar@gmail.com",
-            "photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
+            "Photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
             "StackOverFlow": "",
             "CodeWors": {
                 "color": "blue",
@@ -742,8 +742,8 @@ let Response =
                 }
             },
             "Source": {
-                "linkedin": false,
-                "stackOverFlow": false,
+                "linkedin": true,
+                "stackOverFlow": true,
                 "CodeWars": true
             }
         },
@@ -782,7 +782,7 @@ let Response =
             },
             "Source": {
                 "linkedin": true,
-                "stackOverFlow": true,
+                "stackOverFlow": false,
                 "CodeWars": true
             }
         },
@@ -794,7 +794,7 @@ let Response =
             "Ville": "Paris",
             "Tel": "06.35.14.67.42",
             "Mail": "patrick.colin@gmail.com",
-            "photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
+            "Photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
             "StackOverFlow": {
                 "Reputation": 2235,
                 "Score": 1680
@@ -817,7 +817,7 @@ let Response =
             "Ville": "Créteil",
             "Tel": "06.57.52.40.81",
             "Mail": "",
-            "photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
+            "Photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
             "StackOverFlow": {
                 "Reputation": 2235,
                 "Score": 1680
@@ -840,7 +840,7 @@ let Response =
             "Ville": "Marseille",
             "Tel": "",
             "Mail": "juliette.marchal@gmail.com",
-            "photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
+            "Photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
             "StackOverFlow": {
                 "Reputation": 2235,
                 "Score": 1680
@@ -856,7 +856,7 @@ let Response =
                 }
             },
             "Source": {
-                "linkedin": true,
+                "linkedin": false,
                 "stackOverFlow": true,
                 "CodeWars": true
             }
@@ -869,7 +869,7 @@ let Response =
             "Ville": "Brest",
             "Tel": "",
             "Mail": "",
-            "photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
+            "Photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
             "StackOverFlow": "",
             "CodeWors": {
                 "Langage": {
@@ -878,7 +878,11 @@ let Response =
                     }
                 }
             },
-            "Source": ["linkedin", "StackOverFlow"]
+            "Source": {
+                "linkedin": true,
+                "stackOverFlow": false,
+                "CodeWars": false
+            }
         },
         {
             "Nom": "Bernard",
@@ -888,7 +892,7 @@ let Response =
             "Ville": "",
             "Tel": "",
             "Mail": "",
-            "photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
+            "Photo": "https://previews.123rf.com/images/tuktukdesign/tuktukdesign1606/tuktukdesign160600105/59070189-user-icon-man-profil-homme-d-affaires-avatar-personne-ic%C3%B4ne-illustration-vectorielle.jpg",
             "StackOverFlow": {
                 "Reputation": 2235,
                 "Score": 1680
@@ -908,9 +912,9 @@ let Response =
                 }
             },
             "Source": {
-                "linkedin": false,
+                "linkedin": true,
                 "stackOverFlow": true,
-                "CodeWars": true
+                "CodeWars": false
             }
         }
     ],
