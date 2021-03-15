@@ -1,3 +1,3 @@
 ## FyftvAPI ## Find your future talent
 
-# NodeJS API to consume other application API  #
+# NodeJS API to consume other application API or data base connection #
